@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
+    "test:watch": "npm run test -- --watch"
   },
   "keywords": [],
   "author": "Nuno Bettencourt",
@@ -14,6 +15,10 @@
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "chai": "^4.0.2",
+    "chai-immutable": "^1.6.0",
+    "jsdom": "^11.0.0",
+    "mocha": "^3.4.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   },
@@ -22,5 +27,8 @@
       "es2015",
       "react"
     ]
+  },
+  "dependencies": {
+    "immutable": "^3.8.1"
   }
 }
