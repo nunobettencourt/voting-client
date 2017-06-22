@@ -1,4 +1,4 @@
-import jsdom from 'jsdom';
+import jsdom from 'jsdom/lib/old-api'
 import chai from 'chai';
 import chaiImmutable from 'chai-immutable';
 
